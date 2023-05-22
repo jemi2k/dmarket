@@ -11,8 +11,8 @@ const TEXTAREA_MAX_LENGTH = 255;
 
 const CRYPTO_CURRENCY = "ether";
 
-//const INFURA_URL = "ipfs.infura.io";
-const INFURA_URL = "dmarket.infura-ipfs.io";
+const INFURA_URL = "ipfs.infura.io";
+//const INFURA_URL = "dmarket.infura-ipfs.io";
 
 
 
