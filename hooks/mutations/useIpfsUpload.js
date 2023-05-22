@@ -35,19 +35,28 @@ const useIpfsUpload = (ipfsApiKey) => {
    * @param {File | object} info or file data to be uploaded to ipfs
    * @returns {Promise < Object >} ipfs data
    */
+  // const ipfsUploadMutation = async (info) => {
+  //   setIsLoading(true);
+  //   return client
+  //     .add(info)
+  //     .then((response) => {
+  //       setIsLoading(false);
+  //       setData(response);
+  //       return response;
+  //     })
+  //     .catch((error) => {
+  //       toast.error(`Failed to upload file to IPFS at useIpfsUpload ${error}`);
+  //     });
+  // };
+
   const ipfsUploadMutation = async (info) => {
     setIsLoading(true);
-    return client
-      .add(info)
-      .then((response) => {
-        setIsLoading(false);
-        setData(response);
-        return response;
-      })
-      .catch((error) => {
-        toast.error(`Failed to upload file to IPFS at useIpfsUpload ${error}`);
-      });
-  };
+    const { cid } = await client.add(info);
+    setIsLoading(false);
+    setData(cid);
+    return cid;
+  }
+
 
   return { ipfsUploadMutation, data, isLoading };
 };
