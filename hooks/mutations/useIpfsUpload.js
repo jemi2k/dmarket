@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Buffer } from "buffer";
 import { create } from "ipfs-http-client";
 
-// constants
+//constants
 import { IPFS_PROJECT_ID, INFURA_URL } from "../../utils/constants";
 
 /**
@@ -16,7 +16,7 @@ const useIpfsUpload = (ipfsApiKey) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   //const ipfsClient = require('ipfs-http-client');
- // const ipfsApiKey = process.env.IPFS_API_KEY;
+ //const ipfsApiKey = process.env.IPFS_API_KEY;
   const auth = `Basic ${Buffer.from(
     `${IPFS_PROJECT_ID}:${ipfsApiKey}`
   ).toString("base64")}`;
