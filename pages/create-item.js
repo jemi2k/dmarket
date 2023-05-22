@@ -14,7 +14,7 @@ import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
 
 import Button from "../components/shared/Button/Button";
 
-// constants
+
 import { INFURA_URL } from "../utils/constants";
 
 
@@ -37,7 +37,7 @@ export default function CreateItem({ ipfsApiKey }) {
     useIpfsUpload(ipfsApiKey);
 
 
-  /* Make an upload to ipfs and sets ipfsUrl whenever an image is uploaded */
+ 
   useEffect(() => {
     const ipfsUploadData = async () => {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
@@ -55,7 +55,7 @@ export default function CreateItem({ ipfsApiKey }) {
 
   
 
-  /* Clears uploaded images and ipfs url state */
+
   const handleRemoveAllImages = () => {
     setUploadedImages([]);
     setIpfsUrl("");
