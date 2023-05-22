@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": "v16",
+    "node": "v18",
     "npm": "v8"
   },
   "dependencies": {
