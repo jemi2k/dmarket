@@ -11,31 +11,18 @@ import useIpfsUpload from "../hooks/mutations/useIpfsUpload";
 import Input from "../components/shared/Input/Input";
 import Textarea from "../components/shared/Textarea/Textarea";
 import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
-//import { create } from 'ipfs-http-client'
+
 import Button from "../components/shared/Button/Button";
 
 // constants
 import { INFURA_URL } from "../utils/constants";
 
-// const projectId = process.env.INFURA_IPFS_PROJECT_ID
-// const projectSecret = process.env.INFURA_IPFS_PROJECT_SECRET
-// const projectIdAndSecret = `${projectId}:${projectSecret}`
-// const auth = `Basic ${Buffer.from(projectIdAndSecret).toString('base64')}`
-
-// const client = create({
-//     host: 'ipfs.infura.io',
-//     port: 5001,
-//     protocol: 'https',
-//     headers: {
-//         authorization: auth,
-//     },
-// })
 
 
 
 
 const ipfsInfuraUrl = "https://ipfs.io/ipfs";
-//const ipfsInfuraUrl = "https://ipfs.infura.io/ipfs";
+
 
 export default function CreateItem({ ipfsApiKey }) {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -54,7 +41,7 @@ export default function CreateItem({ ipfsApiKey }) {
   useEffect(() => {
     const ipfsUploadData = async () => {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
-       console.log(ipfsData);
+       //console.log(ipfsData);
       
       setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
        
