@@ -41,7 +41,7 @@ export default function CreateItem({ ipfsApiKey }) {
   useEffect(() => {
     const ipfsUploadData = async () => {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
-       //console.log(ipfsData);
+       
       
       setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
        
