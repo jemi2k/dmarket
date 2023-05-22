@@ -51,25 +51,7 @@ export default function CreateItem({ ipfsApiKey }) {
     }
   }, [uploadedImages]);
 
-  // const ipfsUploadData = async () => {
-  //   let ipfsData;
-  //   try {
-  //     const res = await fetch("https://ipfs.infura.io:5001/api/v0/add", {
-  //       /*...*/
-  //     });
-  //     ipfsData = await res.json();
-  //   } catch (err) {
-  //     console.error(err);
-  //     ipfsData = null;
-  //   }
-
-  //   if (!ipfsData) {
-  //     setTimeout(ipfsUploadData, 5000); // retry in 5s
-  //     return;
-  //   }
-
-  //   setIpfsUrl(`https://ipfs.infura.io/ipfs/${ipfsData.path}`);
-  // };
+ 
 
   
 
