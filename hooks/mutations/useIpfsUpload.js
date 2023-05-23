@@ -26,7 +26,7 @@ const useIpfsUpload = (ipfsApiKey) => {
     port: 5001,
     protocol: "https",
     headers: {
-      authorization: 'Bearer' + process.env.IPFS_API_KEY,
+      authorization: auth,
     },
   });
 
