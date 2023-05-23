@@ -49,13 +49,16 @@ const useIpfsUpload = (ipfsApiKey) => {
   //     });
   // };
 
-  const ipfsUploadMutation = async (info) => {
-    setIsLoading(true);
-    const { cid } = await client.add(info);
-    setIsLoading(false);
-    setData(cid);
-    return cid;
-  }
+  const data = { some: 'data' } 
+  const result = await client.add(data) 
+
+  // const ipfsUploadMutation = async (info) => {
+  //   setIsLoading(true);
+  //   const { cid } = await client.add(info);
+  //   setIsLoading(false);
+  //   setData(cid);
+  //   return cid;
+  // }
 
 
   return { ipfsUploadMutation, data, isLoading };
