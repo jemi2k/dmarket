@@ -24,7 +24,7 @@ const useIpfsUpload = (ipfsApiKey) => {
   const client = create({
     host: INFURA_URL,
     port: 5001,
-    protocol: "https",
+    protocol: "http",
     headers: {
       authorization: auth,
     },

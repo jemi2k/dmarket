@@ -21,7 +21,7 @@ import { INFURA_URL } from "../utils/constants";
 
 
 
-const ipfsInfuraUrl = "https://ipfs.io/ipfs";
+const ipfsInfuraUrl = "http://ipfs.io/ipfs";
 
 
 export default function CreateItem({ ipfsApiKey }) {
