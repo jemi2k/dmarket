@@ -38,7 +38,7 @@ const useIpfsUpload = (ipfsApiKey) => {
  
   const ipfsUploadMutation = async (info) => {
     setIsLoading(true);
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+    
     return client
       .add(info)
       .then((response) => {
