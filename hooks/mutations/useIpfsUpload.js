@@ -22,7 +22,7 @@ const useIpfsUpload = (ipfsApiKey) => {
   ).toString("base64")}`;
 
   const client = create({
-    host: INFURA_URL,
+    host: "ipfs.infura.io",
     port: 5001,
     protocol: "https",
     headers: {
