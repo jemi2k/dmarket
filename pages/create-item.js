@@ -43,7 +43,9 @@ export default function CreateItem({ ipfsApiKey }) {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
        
       
-      setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
+     setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
+     // setIpfsUrl(`https://dmarket.infura-ipfs.io/ipfs/${ipfsData.path}`);
+//      https://dmarket.infura-ipfs.io/ipfs/${ipfsData.path}
        
     };
     if (uploadedImages.length) {
@@ -78,6 +80,7 @@ export default function CreateItem({ ipfsApiKey }) {
     });
     const uploadedData = await ipfsUploadMutation(data);
     const url = `${ipfsInfuraUrl}/${uploadedData.path}`;
+    //const url = `${INFURA_URL}/${uploadedData.path}`;
 
     return createNftMutation(url).then(
       (createNftReceipt) =>

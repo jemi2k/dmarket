@@ -5,4 +5,11 @@ module.exports = {
     //domains: ["assets.vercel.com", "infura-ipfs.io", ""],
     formats: ["image/avif", "image/webp"],
   },
+    "API": {
+    "HTTPHeaders": {
+      "Access-Control-Allow-Origin": [
+        "*"
+      ]
+    }
+  },
 };

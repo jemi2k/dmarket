@@ -22,11 +22,16 @@ const useIpfsUpload = (ipfsApiKey) => {
   ).toString("base64")}`;
 
   const client = create({
-    host: "ipfs.infura.io",
+    host: 'ipfs.infura.io',
     port: 5001,
     protocol: "https",
+    apiPath: "/api/v0",
     headers: {
       authorization: auth,
+      "Access-Control-Allow-Origin": ["*"],
+      Origin: "https://ipfs.infura.io:5001",
+      "User-Agent": "foo",
+      "User-Agent": "foobar"
     },
   });
 
