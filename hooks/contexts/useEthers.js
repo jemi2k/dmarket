@@ -58,7 +58,8 @@ const useEthers = () => {
 };
 
 /** Static contract values */
-const provider = new ethers.providers.InfuraProvider(
+//edited1 from InfuraProvider to AlchemyProvider
+const provider = new ethers.providers.AlchemyProvider( 
   "maticmum", // polygon mumbai network
   PROJECT_ID // project id
 );
