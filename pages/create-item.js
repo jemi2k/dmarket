@@ -79,7 +79,7 @@ export default function CreateItem({ ipfsApiKey }) {
     });
     const uploadedData = await ipfsUploadMutation(data);
     const url = `${ipfsInfuraUrl}/${uploadedData.path}`;
-    //const url = `${INFURA_URL}/${uploadedData.path}`;
+    
 
     return createNftMutation(url).then(
       (createNftReceipt) =>
