@@ -44,8 +44,7 @@ export default function CreateItem({ ipfsApiKey }) {
        
       
      setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
-     // setIpfsUrl(`https://dmarket.infura-ipfs.io/ipfs/${ipfsData.path}`);
-//      https://dmarket.infura-ipfs.io/ipfs/${ipfsData.path}
+     
        
     };
     if (uploadedImages.length) {
