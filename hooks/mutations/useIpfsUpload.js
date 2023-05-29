@@ -30,8 +30,8 @@ const useIpfsUpload = (ipfsApiKey) => {
     apiPath: "/api/v0",
     headers: {
       authorization: auth,
-      "Access-Control-Allow-Origin": ["*"],
-      "User-Agent": "foobar",
+      // "Access-Control-Allow-Origin": ["*"],
+      // "User-Agent": "foobar",
     },
   });
 
