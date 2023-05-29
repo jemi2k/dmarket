@@ -15,7 +15,7 @@ import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
 import Button from "../components/shared/Button/Button";
 
 
-import { INFURA_URL, IPFS_API_KEY } from "../utils/constants";
+import { INFURA_URL } from "../utils/constants";
 
 
 
@@ -152,7 +152,7 @@ export default function CreateItem({ ipfsApiKey }) {
 export async function getServerSideProps() {
   return {
     props: {
-      ipfsApiKey: IPFS_API_KEY,
+      ipfsApiKey: process.env.IPFS_API_KEY,
     },
   };
 }
