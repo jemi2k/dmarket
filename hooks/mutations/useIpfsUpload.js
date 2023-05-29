@@ -13,16 +13,14 @@ import { IPFS_PROJECT_ID, INFURA_URL, IPFS_API_KEY } from "../../utils/constants
  * @returns {ipfsUploadMutation: fn, isLoading: bool, data: ipfs data response} ipfs data
  */
 
-const useIpfsUpload = (ipfsApiKey) => {
+const useIpfsUpload = (IPFS_API_KEY) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
-  
+
   const auth = `Basic ${Buffer.from(
-    `${IPFS_PROJECT_ID}:${ipfsApiKey}`
+    `${IPFS_PROJECT_ID}:${IPFS_API_KEY}`
   ).toString("base64")}`;
 
-
-   
   const client = create({
     host: "ipfs.infura.io",
     port: 5001,
@@ -40,10 +38,10 @@ const useIpfsUpload = (ipfsApiKey) => {
    * @param {File | object} info or file data to be uploaded to ipfs
    * @returns {Promise < Object >} ipfs data
    */
- 
+
   const ipfsUploadMutation = async (info) => {
     setIsLoading(true);
-    
+
     return client
       .add(info)
       .then((response) => {
@@ -56,8 +54,6 @@ const useIpfsUpload = (ipfsApiKey) => {
       });
   };
 
-  
-
   // const ipfsUploadMutation = async (info) => {
   //   setIsLoading(true);
   //   const { cid } = await client.add(info);
@@ -65,7 +61,6 @@ const useIpfsUpload = (ipfsApiKey) => {
   //   setData(cid);
   //   return cid;
   // }
-
 
   return { ipfsUploadMutation, data, isLoading };
 };
