@@ -18,6 +18,7 @@ const INFURA_URL = "dmarket1.infura-ipfs.io";
 
 
 const PROJECT_ID = "zErRQKT2IPg__bQGcm2TbNW86LFJHhym";
+const IPFS_API_KEY = "eee89ed18a409f4763f8f3cf6be175d6";
 
 const IPFS_PROJECT_ID = "2QEqDQlCavMFLAysVS9hfjKhOaB";
 
@@ -49,4 +50,5 @@ export {
   IPFS_PROJECT_ID,
   INFURA_URL,
   PROJECT_ID,
+  IPFS_API_KEY,
 };
