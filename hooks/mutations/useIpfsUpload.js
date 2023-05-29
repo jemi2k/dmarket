@@ -16,7 +16,7 @@ import { IPFS_PROJECT_ID, INFURA_URL } from "../../utils/constants";
 const useIpfsUpload = (ipfsApiKey) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
- //const { ipfsClient, globSource, create } = require("ipfs-http-client"); 
+  
   const auth = `Basic ${Buffer.from(
     `${IPFS_PROJECT_ID}:${ipfsApiKey}`
   ).toString("base64")}`;

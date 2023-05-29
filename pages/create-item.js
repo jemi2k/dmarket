@@ -15,14 +15,14 @@ import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
 import Button from "../components/shared/Button/Button";
 
 
-//import { INFURA_URL } from "../utils/constants";
+import { INFURA_URL } from "../utils/constants";
 
 
 
 
 
-//const ipfsInfuraUrl = "https://ipfs.io/ipfs";
-const ipfsInfuraUrl = "https://ipfs.infura.io/ipfs";
+const ipfsInfuraUrl = "https://ipfs.io/ipfs";
+
 
 export default function CreateItem({ ipfsApiKey }) {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -43,8 +43,8 @@ export default function CreateItem({ ipfsApiKey }) {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
        
       
-     //setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
-     setIpfsUrl(`${ipfsInfuraUrl}/${ipfsData.path}`);
+     setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
+    
      
        
     };
