@@ -5,11 +5,7 @@ import { create } from "ipfs-http-client";
 
 
 //constants
-import {
-  IPFS_PROJECT_ID,
-  INFURA_URL,
-  IPFS_API_KEY,
-} from "../../utils/constants";
+import { IPFS_PROJECT_ID, INFURA_URL, IPFS_API_KEY } from "../../utils/constants";
 
 /**
  * function to return hook, data and loading state
@@ -22,7 +18,7 @@ const useIpfsUpload = (ipfsApiKey) => {
   const [data, setData] = useState([]);
   
   const auth = `Basic ${Buffer.from(
-    `${IPFS_PROJECT_ID}:${IPFS_API_KEY}`
+    `${IPFS_PROJECT_ID}:${ipfsApiKey}`
   ).toString("base64")}`;
 
 
