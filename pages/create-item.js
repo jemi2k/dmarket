@@ -15,7 +15,7 @@ import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
 import Button from "../components/shared/Button/Button";
 
 
-import { INFURA_URL } from "../utils/constants";
+import { INFURA_URL, IPFS_API_KEY } from "../utils/constants";
 
 
 
@@ -24,7 +24,7 @@ import { INFURA_URL } from "../utils/constants";
 const ipfsInfuraUrl = "https://ipfs.io/ipfs";
 
 
-export default function CreateItem({ ipfsApiKey }) {
+export default function CreateItem({ IPFS_API_KEY }) {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [ipfsUrl, setIpfsUrl] = useState("");
 
@@ -34,37 +34,23 @@ export default function CreateItem({ ipfsApiKey }) {
 
   const { createNftMutation, isLoading } = useCreateNft();
   const { ipfsUploadMutation, isLoading: isIpfsLoading } =
-    useIpfsUpload(ipfsApiKey);
+    useIpfsUpload(IPFS_API_KEY);
 
-
- 
   useEffect(() => {
     const ipfsUploadData = async () => {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
-       
-      
-     setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
-    
-     
-       
+
+      setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
     };
     if (uploadedImages.length) {
       ipfsUploadData();
     }
   }, [uploadedImages]);
 
- 
-
-  
-
-
   const handleRemoveAllImages = () => {
     setUploadedImages([]);
     setIpfsUrl("");
   };
-  
-  
-  
 
   const handleSubmit = async (values) => {
     const { name, description } = values;
@@ -75,12 +61,11 @@ export default function CreateItem({ ipfsApiKey }) {
     const data = JSON.stringify({
       name,
       description,
-    
+
       image: ipfsUrl,
     });
     const uploadedData = await ipfsUploadMutation(data);
     const url = `${ipfsInfuraUrl}/${uploadedData.path}`;
-    
 
     return createNftMutation(url).then(
       (createNftReceipt) =>
