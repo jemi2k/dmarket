@@ -152,7 +152,7 @@ export default function CreateItem({ ipfsApiKey }) {
 export async function getServerSideProps() {
   return {
     props: {
-      ipfsApiKey: process.env.IPFS_API_KEY,
+      ipfsApiKey: IPFS_API_KEY,
     },
   };
 }
