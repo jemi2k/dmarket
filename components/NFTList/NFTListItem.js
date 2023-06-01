@@ -110,7 +110,7 @@ const NFTListItem = ({
                             <i className="pi pi-tag mr-2" />
                             <span className="font-semibold">Category</span>
                         </div>
-                        <span className=''> Status</span>
+                        <span className=''>Status</span>
                     </div>
                     <div className="flex flex-column align-items-center text-center mb-3">
                         <Image src={image} 
@@ -120,7 +120,7 @@ const NFTListItem = ({
                         className="w-9 shadow-2 my-3 mx-0" />
                         <div className="text-2xl font-bold">{name}</div>
                         <div className="mb-3">{description}</div>
-                        <Rating value={null} readOnly cancel={false} />
+                        {/* <Rating value={null} readOnly cancel={false} /> */}
                     </div>
                     {price && (
                     <div className="flex align-items-center justify-content-between">
