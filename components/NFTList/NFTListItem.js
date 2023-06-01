@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useWeb3React } from "@web3-react/core";
 import { useRouter } from "next/router";
 import maticIcon from "../../assets/images/polygon-matic.svg";
+import { Rating } from 'primereact/rating';
 
 import { nftPropType } from "../../utils/propTypes";
 import { ACTION_TYPES } from "../../utils/constants";
@@ -60,43 +61,92 @@ const NFTListItem = ({
   };
 
   return (
-    <li
-      className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
-      onClick={handleClick}
-    >
-      <div className="h-4/5 relative">
-        <Image
-          src={image}
-          alt="NFT image"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="top center"
-          className="rounded-lg rounded-b-none"
-        />
-      </div>
-      <div className="p-2">
-        <p className="text-2xl font-semibold">{name}</p>
-        <div>
-          <p className="text-gray-400 truncate">{description}</p>
-        </div>
-      </div>
-      {price && (
-        <div className="p-4 bg-black rounded-lg rounded-t-none">
-          <div className="flex">
-            <Image src={maticIcon} alt="Metamask logo" height={28} width={28} />
-            <p className="text-2xl font-bold text-white ml-2">{price}</p>
-          </div>
-          {hasAction && (
-            <Button
-              onHandleClick={handleAction}
-              label={getAction().label}
-              className="w-full mt-2"
-              isLoading={isActionLoading && tokenId === selectedTokenId}
-            />
-          )}
-        </div>
-      )}
-    </li>
+    // <li
+    //   className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
+    //   onClick={handleClick}
+    // >
+    //   <div className="h-4/5 relative">
+    //     <Image
+    //       src={image}
+    //       alt="NFT image"
+    //       layout="fill"
+    //       objectFit="cover"
+    //       objectPosition="top center"
+    //       className="rounded-lg rounded-b-none"
+    //     />
+    //   </div>
+    //   <div className="p-2">
+    //     <p className="text-2xl font-semibold">{name}</p>
+    //     <div>
+    //       <p className="text-gray-400 truncate">{description}</p>
+    //     </div>
+    //   </div>
+    //   {price && (
+    //     <div className="p-4 bg-black rounded-lg rounded-t-none">
+    //       <div className="flex">
+    //         <Image src={maticIcon} alt="Metamask logo" height={28} width={28} />
+    //         <p className="text-2xl font-bold text-white ml-2">{price}</p>
+    //       </div>
+    //       {hasAction && (
+    //         <Button
+    //           onHandleClick={handleAction}
+    //           label={getAction().label}
+    //           className="w-full mt-2"
+    //           isLoading={isActionLoading && tokenId === selectedTokenId}
+    //         />
+    //       )}
+    //     </div>
+    //   )}
+    // </li>
+
+      <div className="col-12 lg:col-4 cursor-pointer p-2 hover:opacity-90" onClick={handleClick} >
+                <div className="card m-3 border-1 surface-border">
+                    <div className="flex flex-wrap gap-2 align-items-center justify-content-between mb-2">
+                        <div className="flex align-items-center">
+                            <i className="pi pi-tag mr-2" />
+                            <span className="font-semibold">Category</span>
+                        </div>
+                        <span className={`product-badge status-${data.inventoryStatus.toLowerCase()}`}>Status</span>
+                    </div>
+                    <div className="flex flex-column align-items-center text-center mb-3">
+                        <img src={image} alt="Product image" className="w-9 shadow-2 my-3 mx-0" />
+                        <div className="text-2xl font-bold">{name}</div>
+                        <div className="mb-3">{description}</div>
+                        <Rating value={data.rating} readOnly cancel={false} />
+                    </div>
+                    {price && (
+                    <div className="flex align-items-center justify-content-between">
+                        <span className="text-2xl font-semibold">
+                        <Image src={maticIcon} alt="Metamask logo" height={28} width={28} />
+                        {price}</span>
+                        
+                        {hasAction && (
+                        <Button icon="pi pi-shopping-cart" 
+                        onHandleClick={handleAction}
+                        label={getAction().label}
+                        className="w-full mt-2"
+                        isLoading={isActionLoading && tokenId === selectedTokenId}
+                        
+                        />
+                        )}
+                    </div>
+                    )}
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   );
 };
 

@@ -37,7 +37,8 @@
     "react-dropzone": "^11.4.2",
     "react-table": "^7.7.0",
     "react-toastify": "^8.1.0",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "primereact": "^8.6.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.0",
@@ -54,7 +55,8 @@
     "lint-staged": "^12.1.2",
     "postcss": "^8.3.6",
     "prettier": "^2.5.1",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "sass": "^1.54.4"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
