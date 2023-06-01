@@ -98,11 +98,13 @@ const NFTListItem = ({
     //       )}
     //     </div>
     //   )}
-    // </li>
-      // <li className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
-      //  onClick={handleClick}
+   // </li>
+
+      <li className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
+       onClick={handleClick}
       
-      // >
+      >
+      
       <div className="col-12 lg:col-4 " >
                 <div className="card m-3 border-1 surface-border">
                     <div className="flex flex-wrap gap-2 align-items-center justify-content-between mb-2">
@@ -141,6 +143,7 @@ const NFTListItem = ({
                     )}
                 </div>
             </div>
+            </li>
             
 
 
