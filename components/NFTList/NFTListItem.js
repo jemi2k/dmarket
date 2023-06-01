@@ -98,7 +98,7 @@ const NFTListItem = ({
     //       )}
     //     </div>
     //   )}
-   // </li>
+   //</li>
 
       <li className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
        onClick={handleClick}
