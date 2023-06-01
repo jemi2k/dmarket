@@ -113,7 +113,11 @@ const NFTListItem = ({
                         <span className=''> Status</span>
                     </div>
                     <div className="flex flex-column align-items-center text-center mb-3">
-                        <Image src={image} alt="Product image" className="w-9 shadow-2 my-3 mx-0" />
+                        <Image src={image} 
+                        alt="Product image"
+                        layout="fill"
+                        objectFit="cover" 
+                        className="w-9 shadow-2 my-3 mx-0" />
                         <div className="text-2xl font-bold">{name}</div>
                         <div className="mb-3">{description}</div>
                         <Rating value={null} readOnly cancel={false} />
