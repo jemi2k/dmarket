@@ -3,7 +3,7 @@
 // TODO: Consider accessibility
 import PropTypes from "prop-types";
 import Image from "next/image";
-import { Rating } from 'primereact/rating';
+//import { Rating } from 'primereact/rating';
 import { useWeb3React } from "@web3-react/core";
 import { useRouter } from "next/router";
 import maticIcon from "../../assets/images/polygon-matic.svg";
