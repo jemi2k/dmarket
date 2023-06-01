@@ -100,7 +100,7 @@ const NFTListItem = ({
     //   )}
     // </li>
 
-      <div className="col-12 lg:col-4 cursor-pointer p-2 hover:opacity-90" onClick={handleClick} >
+      <li className="col-12 lg:col-4 cursor-pointer p-2 hover:opacity-90" onClick={handleClick} >
                 <div className="card m-3 border-1 surface-border">
                     <div className="flex flex-wrap gap-2 align-items-center justify-content-between mb-2">
                         <div className="flex align-items-center">
@@ -133,7 +133,7 @@ const NFTListItem = ({
                     </div>
                     )}
                 </div>
-            </div>
+            </li>
 
 
 
