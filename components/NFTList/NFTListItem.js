@@ -72,7 +72,7 @@ const NFTListItem = ({
           layout="fill"
           objectFit="cover"
           objectPosition="top center"
-          className="rounded-lg rounded-b-none"
+          className="my-4 md:my-0 w-9 md:w-10rem shadow-2 mr-5"
         />
       </div>
       <div className="p-2">
