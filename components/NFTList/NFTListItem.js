@@ -3,10 +3,11 @@
 // TODO: Consider accessibility
 import PropTypes from "prop-types";
 import Image from "next/image";
+import { Rating } from 'primereact/rating';
 import { useWeb3React } from "@web3-react/core";
 import { useRouter } from "next/router";
 import maticIcon from "../../assets/images/polygon-matic.svg";
-import { Rating } from 'primereact/rating';
+
 
 import { nftPropType } from "../../utils/propTypes";
 import { ACTION_TYPES } from "../../utils/constants";
@@ -106,13 +107,13 @@ const NFTListItem = ({
                             <i className="pi pi-tag mr-2" />
                             <span className="font-semibold">Category</span>
                         </div>
-                        <span className={`product-badge status-${data.inventoryStatus.toLowerCase()}`}>Status</span>
+                        <span className=''> Status</span>
                     </div>
                     <div className="flex flex-column align-items-center text-center mb-3">
-                        <img src={image} alt="Product image" className="w-9 shadow-2 my-3 mx-0" />
+                        <Image src={image} alt="Product image" className="w-9 shadow-2 my-3 mx-0" />
                         <div className="text-2xl font-bold">{name}</div>
                         <div className="mb-3">{description}</div>
-                        <Rating value={data.rating} readOnly cancel={false} />
+                        <Rating value={null} readOnly cancel={false} />
                     </div>
                     {price && (
                     <div className="flex align-items-center justify-content-between">
