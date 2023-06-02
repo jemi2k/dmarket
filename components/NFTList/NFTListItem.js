@@ -62,7 +62,7 @@ const NFTListItem = ({
 
   return (
     <li
-      className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-100 cursor-pointer p-2 hover:opacity-90 bg-white"
+      className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-150 cursor-pointer p-2 hover:opacity-90 bg-white"
       onClick={handleClick}
     >
       <div className="h-4/5 relative">
