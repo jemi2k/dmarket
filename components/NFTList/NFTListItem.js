@@ -62,17 +62,17 @@ const NFTListItem = ({
 
   return (
     <li
-      className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
+      className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-96  cursor-pointer p-2 hover:opacity-90 bg-white"
       onClick={handleClick}
     >
-      <div className="h-4/5 relative">
+      <div className="h-4/5  relative">
         <Image
           src={image}
-          alt="NFT image"
+          alt="Product NFT image"
           layout="fill"
           objectFit="cover"
-          objectPosition="top center"
-          className="my-4 md:my-0 w-9 md:w-10rem shadow-2 mr-5"
+          objectPosition="align-items-center text-center "
+          className="my-4 md:my-0  w-9 md:w-10rem shadow-2 mr-5"
         />
       </div>
       <div className="p-2">
@@ -82,10 +82,10 @@ const NFTListItem = ({
         </div>
       </div>
       {price && (
-        <div className="p-4 bg-black rounded-lg rounded-t-none">
+        <div className="p-4 bg-blue rounded-lg rounded-t-none">
           <div className="flex">
-            <Image src={maticIcon} alt="Metamask logo" height={28} width={28} />
-            <p className="text-2xl font-bold text-white ml-2">{price}</p>
+            <Image src={maticIcon} alt="Metamask logo" height={20} width={20} />
+            <p className="text-xl font-bold text-black ml-2">{price}</p>
           </div>
           {hasAction && (
             <Button
@@ -97,12 +97,7 @@ const NFTListItem = ({
           )}
         </div>
       )}
-   </li>
-
-     
-
-
-    
+    </li>
   );
 };
 
