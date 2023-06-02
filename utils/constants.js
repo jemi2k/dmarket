@@ -3,6 +3,7 @@ const HEADER_ROUTES = {
   CREATE_ITEM: "/create-item",
   MY_ASSETS: "/my-assets",
   CREATOR_DASHBOARD: "/creator-dashboard",
+  SEARCH_BAR: "/category/search",
 };
 
 const INPUT_MAX_LENGTH = 64;

@@ -46,7 +46,7 @@ const ImageUploadPreview = ({
       <Image
         unoptimized
         src={imgPreviewUrl}
-        alt="NFT image"
+        alt="Product NFT image"
         layout="fill"
         objectFit="cover"
         className={classNames(

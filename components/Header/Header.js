@@ -22,7 +22,8 @@ const Header = ({ navOptions, currentRoute, isNavOpen, onSetIsNavOpen }) => {
   return (
     <nav className="fixed inset-x-0 top-0 border-b shadow-md p-6 pb-4 z-40 bg-white h-20">
       <div className="flex items-center">
-        <h1 className="text-3xl font-bold color-blue-500 mr-4">DMarket</h1>
+        <Link href="/">
+        <h1 className="text-3xl font-bold color-blue-500 mr-4">DMarket</h1></Link>
         <div className="flex flex-1 items-center ">
           <div className="hidden lg:block">
             {navOptions.map((option) => {
