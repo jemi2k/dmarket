@@ -65,7 +65,7 @@ const NFTListItem = ({
       className="border shadow rounded-lg overflow-hidden flex flex-col justify-between h-128 cursor-pointer p-2 hover:opacity-90 bg-white"
       onClick={handleClick}
     >
-      <div className="h-3/5 relative">
+      <div className="h-2/5 relative">
         <Image
           src={image}
           alt="NFT image"
