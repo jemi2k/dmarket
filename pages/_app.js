@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+        
 import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 import Layout from "../components/Layout/Layout";
@@ -12,7 +13,7 @@ function NFTMarketPlace({ Component, pageProps }) {
     <Web3ReactProvider getLibrary={getLibrary}>
       <EthersProvider>
         <ToggleWalletPanelProvider>
-          <Layout>
+          <Layout> 
             <Component {...pageProps} />
           </Layout>
         </ToggleWalletPanelProvider>

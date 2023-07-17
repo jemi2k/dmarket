@@ -5,8 +5,15 @@ import useGetMarketNfts from "../hooks/queries/useGetMarketNfts";
 import useToggleWalletPanel from "../hooks/contexts/useToggleWalletPanel";
 import { ACTION_TYPES } from "../utils/constants";
 
+
+
+
 import useBuyNft from "../hooks/mutations/useBuyNft";
 import useRemoveListedNft from "../hooks/mutations/useRemoveListedNft";
+
+import Footer from "../components/Footer";
+import Nftt from "../components/Nft1/Nftt";
+import NftOwnerTable from "../components/NftOwnerTable/NftOwnerTable";
 
 const { REMOVE_ITEM, BUY } = ACTION_TYPES;
 
@@ -44,8 +51,9 @@ export default function Home() {
     });
   };
 
-  return (
-    <>
+  return ( 
+  <>
+    <div className="card">
       <h1 className="py-5 text-2xl  font-">New Released Products</h1>
       <NFTList
         nfts={data}
@@ -55,6 +63,11 @@ export default function Home() {
         isLoading={isLoading}
         emptyListMessage="No products in marketplace, All products Sold Out"
       />
-    </>
+
+
+    </div>
+    <Nftt />
+    <Footer />
+   </>
   );
 }

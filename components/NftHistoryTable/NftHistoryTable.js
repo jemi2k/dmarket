@@ -37,8 +37,8 @@ const NftHistoryTable = ({ data }) => {
         accessor: "price",
         Cell: ({ value }) => (
           <div className="flex">
-            <Image src={maticIcon} alt="Metamask logo" height={24} width={24} />
-            <p className="ml-2">{value}</p>
+            {/* <Image src={maticIcon} alt="Metamask logo" height={24} width={24} /> */}
+            <p className="ml-2">D {value}</p>
           </div>
         ),
       },

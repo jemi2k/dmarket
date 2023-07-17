@@ -20,15 +20,16 @@ import "react-toastify/dist/ReactToastify.css";
 import { changeNetwork } from "../../utils/wallet";
 
 import { HEADER_ROUTES } from "../../utils/constants";
+import Footer from "../Footer";
 
-const { HOME, CREATE_ITEM, MY_ASSETS, CREATOR_DASHBOARD, SEARCH_BAR } = HEADER_ROUTES;
+const { HOME, CREATE_ITEM, MY_ASSETS, CREATOR_DASHBOARD,  } = HEADER_ROUTES;
 
 const navOptions = [
   { route: HOME, label: "Home" },
   { route: CREATE_ITEM, label: "Create Product to Sell" },
   { route: MY_ASSETS, label: "My Products" },
   { route: CREATOR_DASHBOARD, label: "Seller dashboard" },
-  { route: SEARCH_BAR, label: "Search bar"}
+  
 ];
 
 const defaultMetaTitle = "DMarket";
@@ -79,6 +80,8 @@ const Layout = ({ children }) => {
         isNavOpen={isNavOpen}
         onSetIsNavOpen={setIsNavOpen}
       />
+
+     
       {chainId !== 80001 && active && (
         <div className="bg-yellow-200 text-yellow-600 h-12 flex items-center justify-center">
           <ExclamationIcon className="h-6 w-6 mr-2" />
