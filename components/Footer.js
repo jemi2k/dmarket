@@ -56,7 +56,7 @@ const Footer = () => {
                       classNameName=""
                     />
 
-                    <button className="mt-1 w-full bg-blue-500 px-8 py-2 rounded-lg text-sm f uppercase tracking-wide text-black transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
+                    <button className="mt-1 w-full bg-blue-500 px-8 py-3 ml-1 rounded-lg text-sm f uppercase tracking-wide text-black transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
                       Subscribe
                     </button>
                   </div>

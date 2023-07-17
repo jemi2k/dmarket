@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
+
 import { InputText } from "primereact/inputtext"
 import "primereact/resources/primereact.css";
 import "primeicons/primeicons.css"
@@ -15,19 +15,7 @@ const sortOptions = [
   { label: "Electronics", value: "price" },
 ];
 
-const onSortChange = (event) => {
-  const value = event.value;
 
-  if (value.indexOf("!") === 0) {
-    setSortOrder(-1);
-    setSortField(value.substring(1, value.length));
-    setSortKey(value);
-  } else {
-    setSortOrder(1);
-    setSortField(value);
-    setSortKey(value);
-  }
-};
 
 const SearchBar = () => {
   return (
