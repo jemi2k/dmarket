@@ -8,12 +8,12 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer class="bg-white dark:bg-gray-900 inset-x-0 ">
-        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="lg:flex lg:items-start lg:gap-8">
-            <div class="text-teal-600 dark:text-teal-300">
+      <footer className="bg-white dark:bg-gray-900 inset-x-0 ">
+        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="lg:flex lg:items-start lg:gap-8">
+            <div className="text-teal-600 dark:text-teal-300">
               {/* <img
-                class="h-8"
+                className="h-8"
                 viewBox="0 0 28 24"
                 fill="none"
                 xmlns="https://res.cloudinary.com/dq8dlg0cp/image/upload/v1674976504/Alkebuna%20Logo/ALKEBUNA_png_azd43f.png"
@@ -25,14 +25,14 @@ const Footer = () => {
               </img> */}
             </div>
 
-            <div class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
-              <div class="col-span-2">
+            <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
+              <div className="col-span-2">
                 <div>
-                  <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                     Why DMarket?
                   </h2>
 
-                  <p class="mt-4 text-gray-500 dark:text-gray-400">
+                  <p className="mt-4 text-gray-500 dark:text-gray-400">
                     DMarket is more than a marketplace; it's a community
                     offering a secure, transparent, and efficient platform for
                     trading goods and services. Join us in the exciting world of
@@ -41,38 +41,38 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div class="col-span-2 lg:col-span-3 ml-16 lg:flex lg:items-end">
-                <form class="w-fu ml-2  text-black">
-                  <label for="UserEmail" class="sr-only">
+              <div className="col-span-2 lg:col-span-3 ml-16 lg:flex lg:items-end">
+                <form className="w-fu ml-2  text-black">
+                  <label for="UserEmail" className="sr-only">
                     {" "}
                     Email{" "}
                   </label>
 
-                  <div className="p-2  sm:flex sm:items-center sm:gap-4">
+                  <div classNameName="p-2  sm:flex sm:items-center sm:gap-4">
                     <InputText
                       type="email"
                       id="UserEmail"
                       placeholder="john@rhcp.com"
-                      className=""
+                      classNameName=""
                     />
 
-                    <button class="mt-1 w-full bg-blue-500 px-8 py-2 rounded-lg text-sm f uppercase tracking-wide text-black transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
+                    <button className="mt-1 w-full bg-blue-500 px-8 py-2 rounded-lg text-sm f uppercase tracking-wide text-black transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
                       Subscribe
                     </button>
                   </div>
                 </form>
               </div>
 
-              <div class="col-span-2 sm:col-span-1">
-                <p class="font-medium text-gray-900 dark:text-white">
+              <div className="col-span-2 sm:col-span-1">
+                <p className="font-medium text-gray-900 dark:text-white">
                   Services
                 </p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-sm">
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       1on1 Contact
                     </a>
@@ -81,7 +81,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Company Review
                     </a>
@@ -90,7 +90,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Accounts Review
                     </a>
@@ -99,7 +99,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       HR Consulting
                     </a>
@@ -108,7 +108,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       SEO Optimisation
                     </a>
@@ -116,14 +116,14 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="col-span-2 sm:col-span-1">
-                <p class="font-medium text-gray-900 dark:text-white">Company</p>
+              <div className="col-span-2 sm:col-span-1">
+                <p className="font-medium text-gray-900 dark:text-white">Company</p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-sm">
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       About
                     </a>
@@ -132,7 +132,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Meet the Team
                     </a>
@@ -141,7 +141,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Accounts Review
                     </a>
@@ -149,16 +149,16 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="col-span-2 sm:col-span-1">
-                <p class="font-medium text-gray-900 dark:text-white">
+              <div className="col-span-2 sm:col-span-1">
+                <p className="font-medium text-gray-900 dark:text-white">
                   Helpful Links
                 </p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-sm">
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Contact
                     </a>
@@ -167,7 +167,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       FAQs
                     </a>
@@ -176,7 +176,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Live Chat
                     </a>
@@ -184,14 +184,14 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="col-span-2 sm:col-span-1">
-                <p class="font-medium text-gray-900 dark:text-white">Legal</p>
+              <div className="col-span-2 sm:col-span-1">
+                <p className="font-medium text-gray-900 dark:text-white">Legal</p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-sm">
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Accessibility
                     </a>
@@ -200,7 +200,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Returns Policy
                     </a>
@@ -209,7 +209,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Refund Policy
                     </a>
@@ -218,7 +218,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Hiring Statistics
                     </a>
@@ -226,16 +226,16 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="col-span-2 sm:col-span-1">
-                <p class="font-medium text-gray-900 dark:text-white">
+              <div className="col-span-2 sm:col-span-1">
+                <p className="font-medium text-gray-900 dark:text-white">
                   Downloads
                 </p>
 
-                <ul class="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-sm">
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       Marketing Calendar
                     </a>
@@ -244,7 +244,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       SEO Infographics
                     </a>
@@ -252,18 +252,18 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <ul class="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
+              <ul className="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
                 <li>
                   <a
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
-                    <span class="sr-only">Facebook</span>
+                    <span className="sr-only">Facebook</span>
 
                     <svg
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -282,12 +282,12 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
-                    <span class="sr-only">Instagram</span>
+                    <span className="sr-only">Instagram</span>
 
                     <svg
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -306,12 +306,12 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
-                    <span class="sr-only">Twitter</span>
+                    <span className="sr-only">Twitter</span>
 
                     <svg
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -326,12 +326,12 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
-                    <span class="sr-only">GitHub</span>
+                    <span className="sr-only">GitHub</span>
 
                     <svg
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -350,12 +350,12 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
-                    <span class="sr-only">Dribbble</span>
+                    <span className="sr-only">Dribbble</span>
 
                     <svg
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -372,17 +372,17 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class="mt-8 border-t border-gray-100 pt-8 dark:border-gray-800">
-            <div class="sm:flex sm:justify-between">
-              <p class="text-xs text-gray-500 dark:text-gray-400">
+          <div className="mt-8 border-t border-gray-100 pt-8 dark:border-gray-800">
+            <div className="sm:flex sm:justify-between">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 &copy; 2023. DMarket.com. All rights reserved.
               </p>
 
-              <ul class="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
+              <ul className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
                 <li>
                   <a
                     href="#"
-                    class="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                    className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
                   >
                     Terms & Conditions
                   </a>
@@ -391,7 +391,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    class="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                    className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
                   >
                     Privacy Policy
                   </a>
@@ -400,7 +400,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    class="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                    className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
                   >
                     Cookies
                   </a>

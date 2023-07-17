@@ -20,7 +20,7 @@ import useToggleWalletPanel from "../../hooks/contexts/useToggleWalletPanel";
 
 import Input from "../shared/Input/Input";
 
-import maticIcon from "../../assets/images/polygon-matic.svg";
+
 
 import { ACTION_TYPES } from "../../utils/constants";
 

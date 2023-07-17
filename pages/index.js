@@ -13,7 +13,7 @@ import useRemoveListedNft from "../hooks/mutations/useRemoveListedNft";
 
 import Footer from "../components/Footer";
 import Nftt from "../components/Nft1/Nftt";
-import NftOwnerTable from "../components/NftOwnerTable/NftOwnerTable";
+
 
 const { REMOVE_ITEM, BUY } = ACTION_TYPES;
 

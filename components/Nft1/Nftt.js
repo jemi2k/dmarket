@@ -1,33 +1,3 @@
-import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import Image from "next/image";
-import { useWeb3React } from "@web3-react/core";
-import { Formik, Form } from "formik";
-import * as yup from "yup";
-import Button from "../shared/Button/Button";
-import Spinner from "../shared/Spinner/Spinner";
-
-
-import useGetNft from "../../hooks/queries/useGetNft";
-import useGetMarketNftHistory from "../../hooks/queries/useGetMarketNftHistory";
-
-import useRemoveListedNft from "../../hooks/mutations/useRemoveListedNft";
-import useBuyNft from "../../hooks/mutations/useBuyNft";
-import useListNft from "../../hooks/mutations/useListNft";
-
-import useToggleWalletPanel from "../../hooks/contexts/useToggleWalletPanel";
-
-import Input from "../shared/Input/Input";
-
-import maticIcon from "../../assets/images/polygon-matic.svg";
-
-
- 
- 
-  
-    
-
-  
 
  
 

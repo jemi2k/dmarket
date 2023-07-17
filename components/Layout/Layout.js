@@ -20,7 +20,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { changeNetwork } from "../../utils/wallet";
 
 import { HEADER_ROUTES } from "../../utils/constants";
-import Footer from "../Footer";
+
 
 const { HOME, CREATE_ITEM, MY_ASSETS, CREATOR_DASHBOARD,  } = HEADER_ROUTES;
 
