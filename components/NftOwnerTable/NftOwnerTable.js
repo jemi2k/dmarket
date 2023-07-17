@@ -1,11 +1,11 @@
 import { useMemo, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import Image from "next/image";
+
 import { toast } from "react-toastify";
 import Table from "../shared/Table/Table";
 import shortenWalletAddress from "../../utils/shortenWalletAddress";
 
-import maticIcon from "../../assets/images/polygon-matic.svg";
+
 
 const propTypes = {
   data: PropTypes.shape({ price: PropTypes.number, owner: PropTypes.string })
