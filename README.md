@@ -1,5 +1,5 @@
 ![Screenshot_1](https://github.com/user-attachments/assets/f4cc20da-e000-46d8-9661-9b88cc826814)
-## IDP Project description
+
 ## Title - Decentralized Online Marketplace
 DMarket project is a decentralized online marketplace that leverages blockchain technology to facilitate a direct exchange of goods and services between buyers and sellers. By eliminating intermediaries such as banks and payment processors, DMarket provides a transparent, secure, and efficient platform for users to conduct transactions seamlessly.
 
