@@ -43,7 +43,7 @@ contract NFT is ERC721URIStorage, ERC721Enumerable {
         return super.tokenURI(tokenId);
     }
 
-    /* funtion to get all _owner nft tokens id */
+    /* function to get all _owner nft tokens id */
     function getTokenIds(address _owner) public view returns (uint[] memory) {
         uint[] memory _tokensOfOwner = new uint[](ERC721.balanceOf(_owner));
         uint i;

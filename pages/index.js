@@ -11,8 +11,8 @@ import { ACTION_TYPES } from "../utils/constants";
 import useBuyNft from "../hooks/mutations/useBuyNft";
 import useRemoveListedNft from "../hooks/mutations/useRemoveListedNft";
 
-import Footer from "../components/Footer";
-import Nftt from "../components/Nft1/Nftt";
+import Footer from "../components/Footer/Footer";
+//import Nftt from "../components/Nft1/Nftt";
 
 
 const { REMOVE_ITEM, BUY } = ACTION_TYPES;
@@ -66,8 +66,8 @@ export default function Home() {
 
 
     </div>
-    <Nftt />
-    <Footer />
+    {/* <Nftt /> */}
+    {/* <Footer /> */}
    </>
   );
 }

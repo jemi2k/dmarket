@@ -59,8 +59,8 @@ const useEthers = () => {
 
 /** Static contract values */
 //edited1 from InfuraProvider to AlchemyProvider
-const provider = new ethers.providers.AlchemyProvider( 
-  "maticmum", // polygon mumbai network
+const provider = new ethers.providers.AlchemyProvider(
+ { name: "sepolia", chainId: 11155111 }, // ethereum
   PROJECT_ID // project id
 );
 

@@ -11,7 +11,7 @@ import MetaMaskLogo from "../../assets/images/metamask-logo.webp";
 import FortmaticLogo from "../../assets/images/fortmatic-logo.webp";
 
 // constants
-import { MATIC_NETWORK } from "../../utils/constants";
+import { SEPOLIA_NETWORK } from "../../utils/constants";
 
 const CONNECTORS = {
   Injected: {
@@ -48,7 +48,7 @@ const WalletProvidersList = () => {
     } else {
       await activate(connector)
         .then(async () => {
-          if (window.ethereum.chainId !== MATIC_NETWORK.chainId) {
+          if (window.ethereum.chainId !== SEPOLIA_NETWORK.chainId) {
             await changeNetwork();
           }
         })
