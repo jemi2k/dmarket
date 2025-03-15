@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useWeb3React } from "@web3-react/core";
 import Image from "next/image";
 import { toast } from "react-toastify";

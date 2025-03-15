@@ -1,9 +1,8 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { InputText } from "primereact/inputtext";
 import "primereact/resources/primereact.css";
 import "primeicons/primeicons.css";
 import React from "react";
-
-
 
 const Footer = () => {
   return (
@@ -117,7 +116,9 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">Company</p>
+                <p className="font-medium text-gray-900 dark:text-white">
+                  Company
+                </p>
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -185,7 +186,9 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">Legal</p>
+                <p className="font-medium text-gray-900 dark:text-white">
+                  Legal
+                </p>
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>

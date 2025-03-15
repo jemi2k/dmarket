@@ -22,6 +22,7 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off",
+    "@next/next/no-html-link-for-pages": "off",
     "import/no-anonymous-default-export": 0,
     "react-hooks/exhaustive-deps": 0,
     "jsx-a11y/anchor-is-valid": [
@@ -47,8 +48,7 @@
           "some": ["nesting", "id"]
         }
       }
-    ],
-    "@next/next/no-html-link-for-pages": "off"
+    ]
   }
   
 }
