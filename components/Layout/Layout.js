@@ -12,6 +12,7 @@ import Header from "../Header/Header";
 import HeaderNavPanel from "../Header/HeaderNavPanel";
 import Meta from "../Meta/Meta";
 import WalletPanel from "../WalletPanel/WalletPanel";
+import Footer from "../Footer/Footer";
 
 // styles
 import "react-toastify/dist/ReactToastify.css";
@@ -20,6 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { changeNetwork } from "../../utils/wallet";
 
 import { HEADER_ROUTES } from "../../utils/constants";
+
 
 
 const { HOME, CREATE_ITEM, MY_ASSETS, CREATOR_DASHBOARD,  } = HEADER_ROUTES;
@@ -81,19 +83,18 @@ const Layout = ({ children }) => {
         onSetIsNavOpen={setIsNavOpen}
       />
 
-     
-      {chainId !== 80001 && active && (
+      {chainId !== 11155111 && active && (
         <div className="bg-yellow-200 text-yellow-600 h-12 flex items-center justify-center">
           <ExclamationIcon className="h-6 w-6 mr-2" />
-          <span>Please click</span>
+          {/* <span>Please click</span> */}
           <button
             type="button"
             onClick={changeNetwork}
             className="underline m-1"
           >
-            here
+            {/* here */}
           </button>
-          <span>to switch to Polygon test net</span>
+          {/* <span>to switch to Ethereum Sepolia testnet</span> */}
         </div>
       )}
       {/* div with relative class needed to render slideover panel */}
@@ -113,6 +114,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </div>
+      <Footer />
     </div>
   );
 };

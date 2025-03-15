@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
   },
   "engines": {
-    "node": "v16",
-    "npm": "v8"
+    "node": ">=v16",
+    "npm": ">=v8"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
@@ -25,8 +25,9 @@
     "axios": "^0.21.1",
     "buffer": "^6.0.3",
     "chai": "^4.3.4",
+    "dotenv": "^16.4.7",
     "ethereum-waffle": "^3.4.0",
-    "ethers": "^5.4.4",
+    "ethers": "^5.7.2",
     "formik": "^2.2.9",
     "hardhat": "^2.7.1",
     "ipfs-http-client": "^52.0.0",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.0",
     "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "11.1.0",

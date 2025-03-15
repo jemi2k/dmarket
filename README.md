@@ -9,5 +9,8 @@ The project utilizes the Polygon network for smart contracts and IPFS as a datab
 
 Deployed to Mumbai testnet: https://dmarket.vercel.app/
 
+nftMarket deployed to: 0xD51e19965C173fE4AD0f7FD90ee237A1092eeA01
+nft deployed to: 0x579F744a59448ca9c25D5aDC61a85aF15676103F
+
 
 
