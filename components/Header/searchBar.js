@@ -1,21 +1,17 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 
-import { InputText } from "primereact/inputtext"
+import { InputText } from "primereact/inputtext";
 import "primereact/resources/primereact.css";
-import "primeicons/primeicons.css"
+import "primeicons/primeicons.css";
 
 import "primereact/resources/themes/saga-blue/theme.css";
-import { Dropdown } from "primereact/dropdown"
-
-
-
+import { Dropdown } from "primereact/dropdown";
 
 const sortOptions = [
   { label: "Coffee", value: "!price" },
   { label: "Electronics", value: "price" },
 ];
-
-
 
 const SearchBar = () => {
   return (
@@ -34,7 +30,7 @@ const SearchBar = () => {
       </div>
       <span className="p-input-icon-right">
         <i className="pi pi-search" />
-        <InputText  type="search" placeholder="Search by Name" />
+        <InputText type="search" placeholder="Search by Name" />
       </span>
 
       {/* <Button

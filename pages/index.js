@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import NFTList from "../components/NFTList/NFTList";
@@ -5,14 +6,8 @@ import useGetMarketNfts from "../hooks/queries/useGetMarketNfts";
 import useToggleWalletPanel from "../hooks/contexts/useToggleWalletPanel";
 import { ACTION_TYPES } from "../utils/constants";
 
-
-
-
 import useBuyNft from "../hooks/mutations/useBuyNft";
 import useRemoveListedNft from "../hooks/mutations/useRemoveListedNft";
-
-import Footer from "../components/Footer/Footer";
-//import Nftt from "../components/Nft1/Nftt";
 
 
 const { REMOVE_ITEM, BUY } = ACTION_TYPES;
@@ -51,23 +46,19 @@ export default function Home() {
     });
   };
 
-  return ( 
-  <>
-    <div className="card">
-      <h1 className="py-5 text-2xl  font-">New Released Products</h1>
-      <NFTList
-        nfts={data}
-        selectedTokenId={selectedNft.tokenId}
-        onHandleAction={handleAction}
-        isActionLoading={isBuyLoading || isRemoveLoading}
-        isLoading={isLoading}
-        emptyListMessage="No products in marketplace, All products Sold Out"
-      />
-
-
-    </div>
-    {/* <Nftt /> */}
-    {/* <Footer /> */}
-   </>
+  return (
+    <>
+      <div className="card">
+        <h1 className="py-5 text-2xl  font-">New Released Products</h1>
+        <NFTList
+          nfts={data}
+          selectedTokenId={selectedNft.tokenId}
+          onHandleAction={handleAction}
+          isActionLoading={isBuyLoading || isRemoveLoading}
+          isLoading={isLoading}
+          emptyListMessage="No products in marketplace, All products Sold Out"
+        />
+      </div>
+    </>
   );
 }
