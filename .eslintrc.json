@@ -47,7 +47,8 @@
           "some": ["nesting", "id"]
         }
       }
-    ]
+    ],
+    "@next/next/no-html-link-for-pages": "off"
   }
   
 }
