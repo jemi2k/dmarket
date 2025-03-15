@@ -187,7 +187,7 @@ const NftItem = ({ nftId }) => {
                       height={24}
                       width={24}
                     /> */}
-                    <p className="font-bold text-2xl ml-2">D {price}</p>
+                    <p className="font-bold text-2xl ml-2">ETH {price}</p>
                   </div>
                 </div>
               )}
