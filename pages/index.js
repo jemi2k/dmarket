@@ -4,11 +4,10 @@ import { useWeb3React } from "@web3-react/core";
 import NFTList from "../components/NFTList/NFTList";
 import useGetMarketNfts from "../hooks/queries/useGetMarketNfts";
 import useToggleWalletPanel from "../hooks/contexts/useToggleWalletPanel";
-import { ACTION_TYPES } from "../utils/constants";
+import { ACTION_TYPES } from "../utils/constants_old";
 
 import useBuyNft from "../hooks/mutations/useBuyNft";
 import useRemoveListedNft from "../hooks/mutations/useRemoveListedNft";
-
 
 const { REMOVE_ITEM, BUY } = ACTION_TYPES;
 
@@ -49,14 +48,14 @@ export default function Home() {
   return (
     <>
       <div className="card">
-        <h1 className="py-5 text-2xl  font-">New Released Products</h1>
+        <h1 className="py-5 text-2xl  font-">New Released Items</h1>
         <NFTList
           nfts={data}
           selectedTokenId={selectedNft.tokenId}
           onHandleAction={handleAction}
           isActionLoading={isBuyLoading || isRemoveLoading}
           isLoading={isLoading}
-          emptyListMessage="No products in marketplace, All products Sold Out"
+          emptyListMessage="No Items in marketplace, All Items Sold Out"
         />
       </div>
     </>

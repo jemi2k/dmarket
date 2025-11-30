@@ -11,14 +11,13 @@ const TEXTAREA_MAX_LENGTH = 255;
 
 const CRYPTO_CURRENCY = "ether";
 
-//const INFURA_URL = "ipfs.infura.io";
-const INFURA_URL = "dmarket1.infura-ipfs.io";
-//const INFURA_URL = "infura-ipfs.io";
+// PINATA CONFIGURATION - REPLACE WITH YOUR ACTUAL JWT
+const PINATA_JWT =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJmNTNkYWFmNS02ODVlLTRhMWUtYTAzNC00YjQ5YjZmMTE4ZTEiLCJlbWFpbCI6Implcm1pandsbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJGUkExIn0seyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJOWUMxIn1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiODEwNTI2NWYzMzJmNGQyYTAwMWIiLCJzY29wZWRLZXlTZWNyZXQiOiJhMzYyM2U5Yjc5OTBhNGUxNDdmYmQ3OGZjNTQ5NzBkMDEwYzVhZDhmNDFlMDEwODk3MDJmYTk0NGI1YTUyNzU4IiwiZXhwIjoxNzk1OTM0NDM5fQ.ASvVMnPVGNrmL0EBypUqtp-2SO0EEiyBzuKHtNxjPCs";
+
+const PINATA_GATEWAY = "gateway.pinata.cloud";
 
 const PROJECT_ID = "BeaKVAH6JkorKVR6U-hBbOx3eFKIBvZ9";
-const IPFS_API_KEY = "eee89ed18a409f4763f8f3cf6be175d6";
-
-const IPFS_PROJECT_ID = "2QEqDQlCavMFLAysVS9hfjKhOaB";
 
 const ACTION_TYPES = {
   LIST_ITEM: "list_item",
@@ -26,20 +25,8 @@ const ACTION_TYPES = {
   BUY: "buy",
 };
 
-// const SEPOLIA_NETWORK = {
-//   chainId: "0x13881",
-//   rpcUrls: ["https://matic-mumbai.chainstacklabs.com/"],
-//   chainName: "Matic Test net",
-//   nativeCurrency: {
-//     name: "MATIC",
-//     symbol: "MATIC",
-//     decimals: 18,
-//   },
-//   blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
-// };
-
 const SEPOLIA_NETWORK = {
-  chainId: "0xaa36a7", 
+  chainId: "0xaa36a7",
   rpcUrls: [`https://eth-sepolia.g.alchemy.com/v2/${PROJECT_ID}`],
   chainName: "Ethereum Sepolia Testnet",
   nativeCurrency: {
@@ -57,8 +44,7 @@ export {
   CRYPTO_CURRENCY,
   ACTION_TYPES,
   SEPOLIA_NETWORK,
-  IPFS_PROJECT_ID,
-  INFURA_URL,
   PROJECT_ID,
-  IPFS_API_KEY,
+  PINATA_JWT,
+  PINATA_GATEWAY,
 };

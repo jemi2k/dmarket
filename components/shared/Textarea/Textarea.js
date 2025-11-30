@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useField } from "formik";
 
-import { TEXTAREA_MAX_LENGTH } from "../../../utils/constants";
+import { TEXTAREA_MAX_LENGTH } from "../../../utils/constants_old";
 
 const propTypes = {
   name: PropTypes.string.isRequired,
@@ -50,7 +50,7 @@ const Textarea = ({
 Textarea.propTypes = propTypes;
 
 Textarea.defaultProps = {
-  placeholder: "Example: Product ",
+  placeholder: "Example: Item ",
   errorMessage: "This is a required field",
   label: "",
   maxLength: TEXTAREA_MAX_LENGTH,

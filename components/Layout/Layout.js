@@ -22,16 +22,13 @@ import { changeNetwork } from "../../utils/wallet";
 
 import { HEADER_ROUTES } from "../../utils/constants";
 
-
-
-const { HOME, CREATE_ITEM, MY_ASSETS, CREATOR_DASHBOARD,  } = HEADER_ROUTES;
+const { HOME, CREATE_ITEM, MY_ASSETS, CREATOR_DASHBOARD } = HEADER_ROUTES;
 
 const navOptions = [
   { route: HOME, label: "Home" },
-  { route: CREATE_ITEM, label: "Create Product to Sell" },
-  { route: MY_ASSETS, label: "My Products" },
+  { route: CREATE_ITEM, label: "Create Item to Sell" },
+  { route: MY_ASSETS, label: "My Items" },
   { route: CREATOR_DASHBOARD, label: "Seller dashboard" },
-  
 ];
 
 const defaultMetaTitle = "DMarket";

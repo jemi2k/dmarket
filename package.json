@@ -19,6 +19,7 @@
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.2.0",
+    "@tanstack/react-query": "^5.90.11",
     "@web3-react/core": "^6.1.9",
     "@web3-react/fortmatic-connector": "^6.1.6",
     "@web3-react/injected-connector": "^6.0.7",
@@ -63,7 +64,7 @@
     "tailwindcss": "^2.2.7"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix; exit 0",
+    "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
   }
 }

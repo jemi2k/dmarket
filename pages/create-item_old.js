@@ -14,9 +14,11 @@ import ImageUpload from "../components/shared/ImageUpload/ImageUpload";
 
 import Button from "../components/shared/Button/Button";
 
-import { PINATA_GATEWAY, PINATA_JWT } from "../utils/constants";
+import { INFURA_URL, IPFS_API_KEY } from "../utils/constants_old";
 
 const ipfsInfuraUrl = "https://ipfs.io/ipfs";
+//const ipfsInfuraUrl = "https://ipfs.infura.io/ipfs";
+//const ipfsInfuraUrl = "https://cloudflare-ipfs.com";
 
 export default function CreateItem({ ipfsApiKey }) {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -34,7 +36,7 @@ export default function CreateItem({ ipfsApiKey }) {
     const ipfsUploadData = async () => {
       const ipfsData = await ipfsUploadMutation(uploadedImages[0]);
 
-      setIpfsUrl(`https://${PINATA_GATEWAY}/ipfs/${ipfsData.path}`);
+      setIpfsUrl(`${`https://${INFURA_URL}`}/ipfs/${ipfsData.path}`);
     };
     if (uploadedImages.length) {
       ipfsUploadData();
@@ -59,8 +61,7 @@ export default function CreateItem({ ipfsApiKey }) {
       image: ipfsUrl,
     });
     const uploadedData = await ipfsUploadMutation(data);
-
-    const url = `https://${PINATA_GATEWAY}/ipfs/${uploadedData.path}`;
+    const url = `${ipfsInfuraUrl}/${uploadedData.path}`;
 
     return createNftMutation(url).then(
       (createNftReceipt) =>
@@ -132,7 +133,7 @@ export default function CreateItem({ ipfsApiKey }) {
 export async function getServerSideProps() {
   return {
     props: {
-      ipfsApiKey: PINATA_JWT,
+      ipfsApiKey: IPFS_API_KEY,
     },
   };
 }
