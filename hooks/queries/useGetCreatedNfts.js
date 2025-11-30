@@ -37,12 +37,28 @@ const useGetCreatedNfts = () => {
     if (data) {
       const formattedItems = await Promise.all(
         data.map(async (item) => {
-          const tokenUri = await tokenContract.tokenURI(item.tokenId);
-          const meta = await axios.get(tokenUri);
-          return formatItem(item, meta);
+          try {
+            const tokenUri = await tokenContract.tokenURI(item.tokenId);
+
+            // SKIP old NFTs that use ipfs.io (Infura IPFS)
+            if (tokenUri.includes("ipfs.io")) {
+              console.log(`Skipping old NFT with tokenId: ${item.tokenId}`);
+              return null; // Skip this NFT
+            }
+
+            // Only process new NFTs with ipfs:// or other formats
+            const meta = await axios.get(tokenUri);
+            return formatItem(item, meta);
+          } catch (error) {
+            console.error(`Failed to process NFT ${item.tokenId}:`, error);
+            return null; // Skip NFTs that fail to load
+          }
         })
       );
-      setNfts(formattedItems);
+
+      // Filter out null values (old NFTs)
+      const validItems = formattedItems.filter((item) => item !== null);
+      setNfts(validItems);
     }
 
     setIsLoading(false);

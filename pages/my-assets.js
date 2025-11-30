@@ -10,18 +10,18 @@ export default function MyAssets() {
   if (!active) {
     return (
       <div className="flex flex-col justify-center items-center flex-1">
-        <h1 className="py-10 text-2xl">Connect wallet to view your product</h1>
+        <h1 className="py-10 text-2xl">Connect wallet to view your Item</h1>
       </div>
     );
   }
 
   return (
     <>
-      <h1 className="py-5 text-2xl font-bold">My Product</h1>
+      <h1 className="py-5 text-2xl font-bold">My Item</h1>
       <NFTList
         nfts={data}
         isLoading={isLoading}
-        emptyListMessage="No product owned"
+        emptyListMessage="No Item owned"
       />
     </>
   );

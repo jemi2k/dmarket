@@ -37,7 +37,7 @@ const useCreateNft = () => {
             toastUpdate(
               toastRef.current,
               toast.TYPE.SUCCESS,
-              "NFT Product minted successfully!"
+              "NFT Item minted successfully!"
             );
             return receipt;
           })

@@ -64,7 +64,7 @@ export default function CreatorDashboard() {
 
   return (
     <>
-      <h1 className="py-5 text-2xl font-">My listed Producs</h1>
+      <h1 className="py-5 text-2xl font-">My listed Items</h1>
       {!active ? (
         getConnectMessage("Connect wallet to view your listed assets")
       ) : (
@@ -78,14 +78,14 @@ export default function CreatorDashboard() {
         />
       )}
 
-      <h1 className="py-5 text-2xl font-">Products sold</h1>
+      <h1 className="py-5 text-2xl font-">Items sold</h1>
       {!active ? (
-        getConnectMessage("Connect wallet to view your sold products")
+        getConnectMessage("Connect wallet to view your sold Items")
       ) : (
         <NFTList
           nfts={soldNfts}
           isLoading={isLoading || isSortNftsLoading}
-          emptyListMessage="No Products sold"
+          emptyListMessage="No Items sold"
         />
       )}
     </>

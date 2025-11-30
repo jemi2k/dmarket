@@ -20,8 +20,6 @@ import useToggleWalletPanel from "../../hooks/contexts/useToggleWalletPanel";
 
 import Input from "../shared/Input/Input";
 
-
-
 import { ACTION_TYPES } from "../../utils/constants";
 
 const { LIST_ITEM, REMOVE_ITEM, BUY } = ACTION_TYPES;
@@ -111,11 +109,11 @@ const NftItem = ({ nftId }) => {
 
   const actions = {
     [LIST_ITEM]: {
-      label: "List Product",
+      label: "List Item",
       action: (listingPrice) => listNftMutation(nftId, listingPrice),
     },
     [REMOVE_ITEM]: {
-      label: "Remove Product",
+      label: "Remove Item",
       action: () => removeListingNftMutation(itemId),
     },
     [BUY]: {
@@ -135,7 +133,7 @@ const NftItem = ({ nftId }) => {
   if (error) {
     return (
       <div className="flex justify-center items-center flex-1">
-        <h1 className="text-2xl">Product do not exist</h1>
+        <h1 className="text-2xl">Item do not exist</h1>
       </div>
     );
   }
@@ -167,7 +165,7 @@ const NftItem = ({ nftId }) => {
             <div className="h-96 sm:w-96 relative rounded-lg lg:mr-8">
               <Image
                 src={image}
-                alt="Product image"
+                alt="Item image"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="top center"
@@ -179,7 +177,7 @@ const NftItem = ({ nftId }) => {
               <p className="font-medium">{description}</p>
               {shouldShowPrice && (
                 <div>
-                  <p className="font-medium py-2">Price</p>
+                  <p className="font-medium text-2xl py-2">Price</p>
                   <div className="flex items-center">
                     {/* <Image
                       src={maticIcon}
@@ -187,7 +185,7 @@ const NftItem = ({ nftId }) => {
                       height={24}
                       width={24}
                     /> */}
-                    <p className="font-bold text-2xl ml-2">D {price}</p>
+                    <p className="font-bold text-2xl ml-2">{price} ETH</p>
                   </div>
                 </div>
               )}
@@ -202,11 +200,10 @@ const NftItem = ({ nftId }) => {
                     {canListItem && (
                       <Input
                         name="price"
-                        label="Product price in ETH"
+                        label="Item price in ETH"
                         placeholder="Example: 0.75"
-                        errorMessage="Product price is a required field"
+                        errorMessage="Item price is a required field"
                         type="number"
-                        
                       />
                     )}
                     <Button

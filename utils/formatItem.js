@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import { ethers } from "ethers";
-import { CRYPTO_CURRENCY } from "./constants";
+import { CRYPTO_CURRENCY } from "./constants_old";
 
 /**
  *  function to format NFT data

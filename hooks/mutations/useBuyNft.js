@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { ethers } from "ethers";
 import { toast } from "react-toastify";
-import { CRYPTO_CURRENCY } from "../../utils/constants";
+import { CRYPTO_CURRENCY } from "../../utils/constants_old";
 import { nftaddress } from "../../config";
 import toastUpdate from "../../utils/toastUpdate";
 

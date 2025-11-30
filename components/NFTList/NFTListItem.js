@@ -6,9 +6,8 @@ import Image from "next/image";
 import { useWeb3React } from "@web3-react/core";
 import { useRouter } from "next/router";
 
-
 import { nftPropType } from "../../utils/propTypes";
-import { ACTION_TYPES } from "../../utils/constants";
+import { ACTION_TYPES } from "../../utils/constants_old";
 
 import Button from "../shared/Button/Button";
 
@@ -67,7 +66,7 @@ const NFTListItem = ({
       <div className="h-4/5  relative">
         <Image
           src={image}
-          alt="Product NFT image"
+          alt="Item NFT image"
           layout="fill"
           objectFit="cover"
           objectPosition="align-items-center text-center "
@@ -84,7 +83,7 @@ const NFTListItem = ({
         <div className="p-4 bg-blue rounded-lg rounded-t-none">
           <div className="flex">
             {/* <Image src={maticIcon} alt="Metamask logo" height={20} width={20} /> D */}
-            <p className="text-xl font-bold text-black ml-">D {price}</p>
+            <p className="text-xl font-bold text-black ml-"> {price} ETH</p>
 
             {hasAction && (
               <Button

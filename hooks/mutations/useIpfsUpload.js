@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Buffer } from "buffer";
-import { create } from "ipfs-http-client";
-
 
 //constants
-import { IPFS_PROJECT_ID, INFURA_URL, IPFS_API_KEY } from "../../utils/constants";
+import { PINATA_JWT } from "../../utils/constants";
 
 /**
  * function to return hook, data and loading state
@@ -17,22 +14,6 @@ const useIpfsUpload = (IPFS_API_KEY) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
 
-  const auth = `Basic ${Buffer.from(
-    `${IPFS_PROJECT_ID}:${IPFS_API_KEY}`
-  ).toString("base64")}`;
-
-  const client = create({
-    host: "ipfs.infura.io",
-    port: 5001,
-    protocol: "https",
-    apiPath: "/api/v0",
-    headers: {
-      authorization: auth,
-      // "Access-Control-Allow-Origin": ["*"],
-      // "User-Agent": "foobar",
-    },
-  });
-
   /**
    * function to upload data to ipfs
    * @param {File | object} info or file data to be uploaded to ipfs
@@ -42,25 +23,51 @@ const useIpfsUpload = (IPFS_API_KEY) => {
   const ipfsUploadMutation = async (info) => {
     setIsLoading(true);
 
-    return client
-      .add(info)
-      .then((response) => {
-        setIsLoading(false);
-        setData(response);
-        return response;
-      })
-      .catch((error) => {
-        toast.error(`Failed to upload file to IPFS at useIpfsUpload ${error}`);
-      });
-  };
+    const formData = new FormData();
 
-  // const ipfsUploadMutation = async (info) => {
-  //   setIsLoading(true);
-  //   const { cid } = await client.add(info);
-  //   setIsLoading(false);
-  //   setData(cid);
-  //   return cid;
-  // }
+    if (info instanceof File) {
+      formData.append("file", info);
+    } else if (typeof info === "string") {
+      const blob = new Blob([info], { type: "application/json" });
+      formData.append("file", blob, "metadata.json");
+    }
+
+    const pinataOptions = JSON.stringify({
+      cidVersion: 0,
+    });
+    formData.append("pinataOptions", pinataOptions);
+
+    try {
+      const response = await fetch(
+        "https://api.pinata.cloud/pinning/pinFileToIPFS",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${PINATA_JWT}`,
+          },
+          body: formData,
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`IPFS upload failed: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      setIsLoading(false);
+      setData(result);
+
+      // Return in same format as before for compatibility
+      return {
+        path: result.IpfsHash,
+        cid: result.IpfsHash,
+      };
+    } catch (error) {
+      setIsLoading(false);
+      toast.error(`Failed to upload file to IPFS at useIpfsUpload ${error}`);
+    }
+  };
 
   return { ipfsUploadMutation, data, isLoading };
 };

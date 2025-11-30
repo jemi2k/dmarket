@@ -12,7 +12,7 @@
 /.next/
 /out/
 
-# production
+# Itemion
 /build
 
 # misc
@@ -28,7 +28,7 @@ yarn-error.log*
 .env.local
 .env.development.local
 .env.test.local
-.env.production.local
+.env.Itemion.local
 
 # local secret files
 .secret

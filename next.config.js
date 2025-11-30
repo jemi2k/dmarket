@@ -12,6 +12,7 @@ module.exports = {
       "ipfs.infura.io",
       "dmarket1.infura-ipfs.io",
       "d.atlasofshop.com",
+      "gateway.pinata.cloud",
     ],
     // domains: ["assets.vercel.com", "infura-ipfs.io", ""],
     formats: ["image/avif", "image/webp"],
