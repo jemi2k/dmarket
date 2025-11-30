@@ -58,7 +58,7 @@ const useIpfsUpload = (IPFS_API_KEY) => {
       setIsLoading(false);
       setData(result);
 
-      // Return in same format as before for compatibility
+      // return in same format as before for compatibility
       return {
         path: result.IpfsHash,
         cid: result.IpfsHash,
