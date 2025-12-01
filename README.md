@@ -1,4 +1,5 @@
-![DMarket Screenshot](https://github.com/user-attachments/assets/f4cc20da-e000-46d8-9661-9b88cc826814)
+<img width="1901" height="971" alt="image" src="https://github.com/user-attachments/assets/a2397dfc-8884-4976-9aa5-fd2bbeb45e4e" />
+
 
 # DMarket – Decentralized Marketplace for Digital Items
 
