@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
@@ -37,8 +37,8 @@
     "primeicons": "^6.0.1",
     "primereact": "^8.7.3",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-dropzone": "^11.4.2",
     "react-icons": "^4.10.1",
     "react-table": "^7.7.0",
