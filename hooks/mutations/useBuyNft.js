@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { ethers } from "ethers";
 import { toast } from "react-toastify";
-import { CRYPTO_CURRENCY } from "../../utils/constants_old";
+import { CRYPTO_CURRENCY } from "../../utils/constants";
 import { nftaddress } from "../../config";
 import toastUpdate from "../../utils/toastUpdate";
 
@@ -58,7 +58,7 @@ const useBuyNft = () => {
       })
       .catch((err) => {
         let errorMessage = err.message;
-        if (err.data.code === -32000) {
+        if (err.data && err.data.code === -32000) {
           errorMessage = "Insufficient funds";
         }
         toastUpdate(toastRef.current, toast.TYPE.ERROR, errorMessage);
