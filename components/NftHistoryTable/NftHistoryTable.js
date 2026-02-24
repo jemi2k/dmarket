@@ -28,33 +28,34 @@ const NftHistoryTable = ({ data }) => {
   const columns = useMemo(
     () => [
       {
-        Header: "Event",
-        accessor: "sold",
-        Cell: ({ value }) => <div>{value ? "Sold" : "Listed"}</div>,
+        header: "Event",
+        accessorKey: "sold",
+        cell: (info) => <div>{info.getValue() ? "Sold" : "Listed"}</div>,
       },
       {
-        Header: "Price",
-        accessor: "price",
-        Cell: ({ value }) => (
+        header: "Price",
+        accessorKey: "price",
+        cell: (info) => (
           <div className="flex">
             {/* <Image src={maticIcon} alt="Metamask logo" height={24} width={24} /> */}
-            <p className="ml-2">D {value}</p>
+            <p className="ml-2">D {info.getValue()}</p>
           </div>
         ),
       },
       {
-        Header: "From",
-        accessor: "seller",
-        Cell: ({ value }) => (
-          <button type="button" onClick={() => handleClick(value)}>
-            {shortenWalletAddress(value)}
+        header: "From",
+        accessorKey: "seller",
+        cell: (info) => (
+          <button type="button" onClick={() => handleClick(info.getValue())}>
+            {shortenWalletAddress(info.getValue())}
           </button>
         ),
       },
       {
-        Header: "To",
-        accessor: "owner",
-        Cell: ({ value }) => {
+        header: "To",
+        accessorKey: "owner",
+        cell: (info) => {
+          const value = info.getValue();
           const isListed =
             value === "0x0000000000000000000000000000000000000000";
           return (

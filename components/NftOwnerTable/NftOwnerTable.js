@@ -37,21 +37,21 @@ const NftOwnerTable = ({ data, price }) => {
   const columns = useMemo(
     () => [
       {
-        Header: "Owner",
-        accessor: "owner",
-        Cell: ({ value }) => (
-          <button type="button" onClick={() => handleClick(value)}>
-            {isMobile ? shortenWalletAddress(value) : value}
+        header: "Owner",
+        accessorKey: "owner",
+        cell: (info) => (
+          <button type="button" onClick={() => handleClick(info.getValue())}>
+            {isMobile ? shortenWalletAddress(info.getValue()) : info.getValue()}
           </button>
         ),
       },
       {
-        Header: "Price",
-        accessor: "price",
-        Cell: ({ value }) => (
+        header: "Price",
+        accessorKey: "price",
+        cell: (info) => (
           <div className="flex">
             {/* <Image src={maticIcon} alt="Metamask logo" height={24} width={24} /> */}
-            <p className="ml-2">D {value}</p>
+            <p className="ml-2">D {info.getValue()}</p>
           </div>
         ),
       },
